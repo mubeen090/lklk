@@ -1,4 +1,3 @@
-jsx
 import React, { useState } from "react";
 import styles from "./Services.module.css";
 import Heading from "../common/Heading/Heading";
@@ -13,19 +12,19 @@ const data = [
     logo: web,
     heading: "User Experience",
     para: "Lessons on design that cover the most recent developments.",
-    link: "testimonials", // Add the link to testimonials page
+    link: "https://forms.gle/cYgDjY7qJCLVER9w5",
   },
   {
     logo: ui,
     heading: "IT Services",
     para: "Classes in development that cover the most recent advancements in web.",
-    link: "it-services", // Add the link to IT services page
+    link: "https://forms.gle/cYgDjY7qJCLVER9w5", 
   },
   {
     logo: market,
     heading: "Non-IT Services",
     para: "Marketing courses that cover the most recent marketing trends",
-    link: "non-it-services", // Add the link to non-IT services page
+    link: "https://forms.gle/cYgDjY7qJCLVER9w5", 
   },
 ];
 
@@ -33,8 +32,8 @@ const Services = () => {
   const [activeLink, setActiveLink] = useState(null);
 
   const handleLearnMore = (link) => {
-    // Redirect or open course card based on the link
-    console.log("Learn More clicked for", link);
+    // Open the Google Form URL in a new tab
+    window.open(link, "_blank");
   };
 
   return (
@@ -60,7 +59,7 @@ const Services = () => {
                   className={styles.learn_more}
                   onClick={() => handleLearnMore(item.link)}
                 >
-                  Learn More {">"}
+                  Learn More
                 </h2>
               </div>
             );
